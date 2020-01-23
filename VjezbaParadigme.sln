@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vjezba1.Test", "Vjezba1.Test\Vjezba1.Test.csproj", "{D2362879-57D1-42A5-9B4E-4EDA1D6EC9AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vjezba1", "Vjezba1\Vjezba1.csproj", "{4A30C93B-34A1-4D25-B72E-6CFC67FDC8FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2362879-57D1-42A5-9B4E-4EDA1D6EC9AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2362879-57D1-42A5-9B4E-4EDA1D6EC9AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2362879-57D1-42A5-9B4E-4EDA1D6EC9AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2362879-57D1-42A5-9B4E-4EDA1D6EC9AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A30C93B-34A1-4D25-B72E-6CFC67FDC8FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A30C93B-34A1-4D25-B72E-6CFC67FDC8FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A30C93B-34A1-4D25-B72E-6CFC67FDC8FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A30C93B-34A1-4D25-B72E-6CFC67FDC8FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {399D6CE3-6217-40FE-BAF5-D7B74E2FD760}
+	EndGlobalSection
+EndGlobal
