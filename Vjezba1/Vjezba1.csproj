@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Driver.cs" />
     <Compile Include="IWinMoney.cs" />
+    <Compile Include="MockMoney.cs" />
     <Compile Include="Money.cs" />
     <Compile Include="Truck.cs" />
     <Compile Include="Car.cs" />

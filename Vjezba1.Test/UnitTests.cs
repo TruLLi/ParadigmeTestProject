@@ -1,4 +1,5 @@
 ﻿using System;
+using Moq;
 using NUnit.Framework;
 
 namespace Vjezba1.Test
@@ -120,15 +121,15 @@ namespace Vjezba1.Test
         [SetUp]
         public void Setup()
         {
-            Denis = new Driver(null) { Money = 10 };
+            Denis = new Driver(null) { Money = 1000 };
             Mario = new Driver(null) { Money = 100 };
         }
 
         //testing method name convection Method_Scenario_ExpectedBehavior()
 
         [Test]
-        [TestCase(10, 0)]
-        [TestCase(11, 10)]
+        [TestCase(1000, 0)]
+        [TestCase(200, 800)]
         public void TestMethod1(int withdrawAmount, int result)
         {
             Denis.Withdraw(withdrawAmount);
@@ -147,6 +148,107 @@ namespace Vjezba1.Test
 
             // Assert
             Assert.That(result, Is.EqualTo(1));
+        }
+
+
+        // testiranje pripreme za mockanje
+        //testing method name convection Method_Scenario_ExpectedBehavior()
+
+        [Test]
+        public void Money_FakeMoney_AddingFakeMoney()
+        {
+
+            //Arrange
+            var driver = new Driver(new FakeMoney())
+            {
+                Money = 1000
+            };
+
+            // Act
+            driver.Withdraw(100);
+            driver.Money += driver.MakingMoney();
+
+            // Assert
+            Assert.That(driver.Money, Is.EqualTo(900));
+            
+        }
+
+        [Test]
+        public void Money_FakeMoney_DecreaseOrIncreaseMoney()
+        {
+            // Arrange
+            var driver = new Driver(new AddMoney(200))
+            { 
+                Money = 1000 
+            };
+
+            // Act
+            driver.Withdraw(100);
+            driver.Money += driver.MakingMoney();
+
+            // Assert
+            Assert.That(driver.Money, Is.EqualTo(1100));
+        }
+
+        [Test]
+        public void Money_MockPrepering()
+        {
+            // Arrange
+            var money = new MockMoney(500);
+            var driver = new Driver(money)
+            {
+                Money = 1000
+            };
+
+            // Act
+            driver.Withdraw(100);
+            driver.Money += driver.MakingMoney();
+            //driver.Money += driver.MakingMoney();
+
+            // Assert
+            Assert.Multiple(() =>
+            {
+                Assert.That(driver.Money, Is.EqualTo(1400));
+                Assert.That(money.MethodCount["WinMoney"], Is.EqualTo(1));
+            });
+        }
+
+        // Pokusaj mockanja s Moq frameworkom
+
+        [Test]
+        public void Moq_vjezbaTest1()
+        {
+            // Arrange
+            var mock = new Mock<IWinMoney>();
+
+            mock.Setup(m => m.WinMoney()).Returns(1000);
+            var driver = new Driver(mock.Object) 
+            { 
+                Money = 100 
+            };
+
+            // Act
+            driver.Money += driver.MakingMoney();
+            driver.Money += driver.MakingMoney();
+
+
+            // Assert
+            Assert.That(driver.Money, Is.EqualTo(2100));
+        }
+
+        [Test]
+        public void Moq_vjezbaTest2()
+        {
+            // Arrange
+
+            var mock = new Mock<IWinMoney>();
+            var driver = new Driver(mock.Object);
+
+            // Act
+            driver.Money += driver.MakingMoney();
+
+            // Assert
+            mock.Verify(m => m.WinMoney(), Times.AtLeast(1));
         }
 
 
