@@ -68,10 +68,6 @@
       <Project>{4A30C93B-34A1-4D25-B72E-6CFC67FDC8FA}</Project>
       <Name>Vjezba1</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Vjezba2\Vjezba2.csproj">
-      <Project>{3a4da911-3042-41ba-ba81-82f9d52d2f12}</Project>
-      <Name>Vjezba2</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

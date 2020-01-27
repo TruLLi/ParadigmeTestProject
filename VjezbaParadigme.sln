@@ -7,10 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vjezba1.Test", "Vjezba1.Tes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vjezba1", "Vjezba1\Vjezba1.csproj", "{4A30C93B-34A1-4D25-B72E-6CFC67FDC8FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vjezba2", "Vjezba2\Vjezba2.csproj", "{3A4DA911-3042-41BA-BA81-82F9D52D2F12}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vjezba2.Test", "Vjezba2.Test\Vjezba2.Test.csproj", "{976771DB-C2EE-4B17-8DDB-C0C9F4153C42}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,14 +21,6 @@ Global
 		{4A30C93B-34A1-4D25-B72E-6CFC67FDC8FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A30C93B-34A1-4D25-B72E-6CFC67FDC8FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A30C93B-34A1-4D25-B72E-6CFC67FDC8FA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3A4DA911-3042-41BA-BA81-82F9D52D2F12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3A4DA911-3042-41BA-BA81-82F9D52D2F12}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3A4DA911-3042-41BA-BA81-82F9D52D2F12}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3A4DA911-3042-41BA-BA81-82F9D52D2F12}.Release|Any CPU.Build.0 = Release|Any CPU
-		{976771DB-C2EE-4B17-8DDB-C0C9F4153C42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{976771DB-C2EE-4B17-8DDB-C0C9F4153C42}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{976771DB-C2EE-4B17-8DDB-C0C9F4153C42}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{976771DB-C2EE-4B17-8DDB-C0C9F4153C42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
