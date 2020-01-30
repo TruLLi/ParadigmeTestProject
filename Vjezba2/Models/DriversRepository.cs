@@ -46,10 +46,10 @@ namespace Vjezba2.Models
 
         public async Task<bool> Delete(int id)
         {
-            var product = await Get(id);
-            if (product == null)
+            var driver = await Get(id);
+            if (driver == null)
                 return false;
-            context.Driver.Remove(product);
+            context.Driver.Remove(driver);
             await context.SaveChangesAsync();
             return true;
         }
