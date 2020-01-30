@@ -34,7 +34,7 @@ namespace Vjezba2
             }
             else
             {
-                services.AddDbContext<Context>(options => options.UseSqlServer(Configuration.GetConnectionString("Driver")));
+                services.AddDbContext<Context>(options => options.UseSqlServer(Configuration.GetConnectionString("DriverDb")));
             }
 
             services.AddControllers();
