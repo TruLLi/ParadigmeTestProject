@@ -1,2 +1,2 @@
 # ParadigmeTestProject
-Zadnja i clean verzija projekta se nalazi ovdje https://github.com/TruLLi/ParadigmeProjekt
+Zadnja, clean i verzija projekta koja radi se nalazi ovdje https://github.com/TruLLi/ParadigmeProjekt
