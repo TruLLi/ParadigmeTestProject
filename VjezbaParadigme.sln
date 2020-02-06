@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vjezba2", "Vjezba2\Vjezba2.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vjezba2.Test", "Vjezba2.Test\Vjezba2.Test.csproj", "{906E9DC9-8F0D-43BC-B335-F8C8EF1B87D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vjezba3", "Vjezba3\Vjezba3.csproj", "{769C81ED-1361-47F8-B7AC-0971C9FF1BB0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{906E9DC9-8F0D-43BC-B335-F8C8EF1B87D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{906E9DC9-8F0D-43BC-B335-F8C8EF1B87D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{906E9DC9-8F0D-43BC-B335-F8C8EF1B87D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{769C81ED-1361-47F8-B7AC-0971C9FF1BB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{769C81ED-1361-47F8-B7AC-0971C9FF1BB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{769C81ED-1361-47F8-B7AC-0971C9FF1BB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{769C81ED-1361-47F8-B7AC-0971C9FF1BB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
