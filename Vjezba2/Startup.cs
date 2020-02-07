@@ -6,6 +6,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Vjezba2.Models;
 using Microsoft.Extensions.Hosting;
+using Metrics;
+using System;
+using Microsoft.Owin;
+
+//[assembly: OwinStartup(typeof(Vjezba2.Startup))]
 
 namespace Vjezba2
 {
@@ -17,6 +22,17 @@ namespace Vjezba2
         {
             Configuration = configuration;
             this.env = env;
+
+
+            Metric.Config.WithHttpEndpoint("http://localhost:12345/")
+                // .WithAllCounters()
+                .WithInternalMetrics()
+                .WithReporting(config => config
+                    .WithCSVReports(@"c:\temp\reports\", TimeSpan.FromSeconds(30))
+                    .WithConsoleReport(TimeSpan.FromSeconds(30))
+                    .WithTextFileReport(@"C:\temp\reports\metrics.txt", TimeSpan.FromSeconds(30))
+                );
+
         }
 
         public IConfiguration Configuration { get; }
@@ -57,6 +73,8 @@ namespace Vjezba2
             {
                 endpoints.MapControllers();
             });
+
+
         }
     }
 }
