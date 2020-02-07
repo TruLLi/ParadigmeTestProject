@@ -4,18 +4,24 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Vjezba2.Models;
+using Metrics;
 
 namespace Vjezba2.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class DriversController : Controller
     {
         private readonly IDriversRepository driversRepository;
 
         public DriversController(IDriversRepository driversRepository) => this.driversRepository = driversRepository;
 
+        //Metrics 
+        private readonly Timer timer = Metric.Timer("DriversController.GetDriver", Unit.Requests);
+
         // GET: api/Drivers
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Driver>>> GetDriver()
+        public async Task<ActionResult<IEnumerable<Driver>>> GetAll()
         {
             var drivers = await driversRepository.GetAll();
             return Ok(drivers);
@@ -25,10 +31,14 @@ namespace Vjezba2.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Driver>> GetDriver(int id)
         {
-            var driver = await driversRepository.Get(id);
-            if (driver == null)
-                return NotFound();
-            return driver;
+            using (var context = timer.NewContext(id.ToString()))
+            {
+                var driver = await driversRepository.Get(id);
+                if (driver == null)
+                    return NotFound();
+                return driver;
+            }
+               
         }
 
         // PUT: api/Drivers/5

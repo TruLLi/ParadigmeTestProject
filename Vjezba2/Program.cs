@@ -24,6 +24,8 @@ namespace Vjezba2
                 }
             }
             host.Run();
+
+
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
